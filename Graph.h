@@ -13,21 +13,27 @@ class Graph{
 private:
     int numOfVertex;
     int numOfEdge;
-    vector<vector<int>> graph;
+    
+
 
 public:
-    void connect(int i,int j){}
+    vector<int> degree;
+    vector<vector<int>> graph;
+    
+    void connect(int i,int j);
 
-    void disconnect(int i, int j){}
+    void disconnect(int i, int j);
 
     vector<int> bfs(int start);
     vector<int> dfs(int start);
 
-    void printBfs();
-    void printDfs();
-
-    Graph(){}
-    Graph(int v,int e){}
+    void printBfs(int start);
+    void printDfs(int start);
+    void printGraph();
+    void setGraphDegree();
+    void printDegree();
+    Graph();
+    Graph(int v,int e);
 };
 
 #endif
