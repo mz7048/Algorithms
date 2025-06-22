@@ -165,23 +165,28 @@ vector<int> mergeSort(vector<int>& vec,int p,int r){
 
 
 int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int V,E,S;
     cin >> V >> E >> S;
-    Graph graph(V,E);
+    Graph graph(V,E);//O(V)
 
+    //O(E)
     for(int i = 0; i < E; i++){
         int v,e;
         cin >> v >> e;
         graph.connect(v-1,e-1);
     }
     
+    //O(VELogE) -> ELogV라네요 어캐 증명하지
     for(int i = 0; i < V; i++){
         mergeSort(graph.graph[i],0,graph.graph[i].size() - 1);
     }
     
     //graph.printGraph();
 
-    
+    //V+E
     graph.printDfs(S-1);
     graph.printBfs(S-1);
 }

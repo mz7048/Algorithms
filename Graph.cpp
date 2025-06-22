@@ -1,5 +1,5 @@
 #include "Graph.h"
-
+//인접 리스트 기반 그래프
 Graph::Graph(){
     numOfVertex = 0;
     numOfEdge = 0;

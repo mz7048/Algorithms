@@ -2,6 +2,8 @@
     "files.associations": {
         "vector": "cpp",
         "deque": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "1012_유기농 배추": "cpp"
     }
 }
