@@ -4,6 +4,7 @@
         "deque": "cpp",
         "string": "cpp",
         "iosfwd": "cpp",
-        "1012_유기농 배추": "cpp"
+        "1012_유기농 배추": "cpp",
+        "iostream": "cpp"
     }
 }
