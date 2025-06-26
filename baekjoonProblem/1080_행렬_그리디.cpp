@@ -68,7 +68,7 @@ int main(){
         }
     }
     
-    B.printMatrix();
+    //B.printMatrix();
 
     int count = 0;
     int flag = 1;

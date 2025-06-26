@@ -32,6 +32,7 @@ public:
         for(int i = 0; !graph.empty(); i++){
             int x = graph.front()[0];
             int y = graph.front()[1];
+            
             if(matrix.matrix[x][y] == 0){
                 graph.erase(graph.begin());
                 continue;

@@ -14,6 +14,7 @@ private:
 
 
 public:
+    static int numOfGraph;
     vector<int> degree;
     vector<vector<int>> graph;
     
@@ -55,10 +56,6 @@ public:
                     bfsColor[*it] = "Gray";
                     bfsTree.push_back(*it);
 
-                    //
-                    cout << *it+1 << ": ";
-                    printColor(bfsColor);
-                    //
                 }
             }
             bfsColor[current] = "Black";
@@ -80,10 +77,7 @@ public:
             if(dfsColor[current] == "White"){
                 dfsTree.push_back(current);
                 dfsColor[current] = "Gray";
-                //
-                cout << current+1 << ": ";
-                printColor(dfsColor);
-                //
+               
                 for(auto it = graph[current].rbegin(); it != graph[current].rend(); it++){
                     if(dfsColor[*it] == "White"){
                         st.push(*it);
@@ -131,6 +125,8 @@ public:
         cout << '\n';
     }
 
+
+
     Graph(){
         numOfVertex = 0;
         numOfEdge = 0;
@@ -146,6 +142,8 @@ public:
         }
     }
 };
+
+int Graph::numOfGraph = 0;
 
 void merge(vector<int>& vec, int p, int m, int r){
     int n1 = m - p + 1;
